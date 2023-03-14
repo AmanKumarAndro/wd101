@@ -1,0 +1,139 @@
+<html>
+
+<head>
+  <style>
+    body{
+    
+    color: #0c0b0b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.42857143;
+    margin: 0;
+    align-items: center;
+}
+
+#main{
+    margin: 100px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 500px;
+    width: 90%;
+}
+
+#main h1{
+    padding-top: 10px;
+    padding-left: 20px;
+    font-size: 42px;
+}
+
+#form-box{
+    background-color: rgb(64, 160, 201);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    height: 500px;
+    width: 500px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+
+#agree{
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 16px;
+}
+#agree input{
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgb(137, 24, 24);
+    border-radius: 40px;
+}
+
+#submit{
+    margin-left: 280px;
+    margin-top: 10px;
+    font-size: 20px;
+    height: 50px;
+    width: 90px;
+    border: 0;
+    border-radius: 40px;
+    
+}
+
+#table-box{
+    margin : 0 20px;
+    background-color: rgb(104, 0, 110);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: bottom;
+}
+td,th{
+   
+    width: 100px;
+    text-align: left;
+}
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="form-box">
+      <h1>Registration Form </h1>
+      <form id="form">
+        <div id="username" class="inputs">
+          <label for="name">Enter your name</label>
+          <input type="text" required id="name" name="name" placeholder="Your name.." required/>
+        </div>
+        <div id="emailid" class="inputs">
+          <label for="email">Valid Email</label>
+          <input type="email"required id="email" name="email" placeholder="Your email.." required />
+        </div>
+        <div id="passwd" class="inputs">
+          <label for="password">New Password</label>
+          <input type="password" required id="password" name="password" placeholder="Enter Password" required/>
+        </div>
+        <div id="dob_id" class="inputs">
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" type="date" required/>
+        </div>
+        <div id="agree">
+          <input id="tc" type="checkbox"> I have read and agree to the terms and conditions</input>
+        </div>
+        <button id="submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="table-box">
+        <h1>Entries</h1>
+        <table id="user-table">
+          <tr>
+            <th>Name</th>
+            <th>Email Id</th>
+            <th>Password</th>
+            <th>Date of Birth</th>
+            <th>Accepted terms?</th>
+        
+        </table>
+      </div>
+  </div>
+
+
+<script src="index.js"></script>
+</body>
+
+</html>
